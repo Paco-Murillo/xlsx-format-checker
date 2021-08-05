@@ -1,4 +1,4 @@
-import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -36,7 +36,7 @@ public class XLSXFormatChecker {
         System.out.println("Para cada una de las columnas seleccionar el tipo de información a checar por sintaxis\n" +
                 "1 - Email\n2 - Numero de telefono\n3 - Nombre\n");
 
-        Cell c;
+        XSSFCell c;
         for (int i = 0; i < row.getLastCellNum(); i++) {
             c = row.getCell(i);
             System.out.print(c +": ");
